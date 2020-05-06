@@ -13,9 +13,9 @@ export interface FormikWizardContextValue<V = any, S = any> {
 
 export interface FormikWizardStepType {
   id: string
-  component: React.SFC<{}>
+  component: React.SFC<FormikProps<any>>
   validationSchema?: Schema<any>
-  validate?: (values: any) => void | object | Promise<FormikErrors<any>>,
+  validate?: (values: any) => void | object | Promise<FormikErrors<any>>
   initialValues?: FormikWizardBaseValues
   actionLabel?: string
   onAction?: (
