@@ -104,8 +104,6 @@ function FormikWizardStep({
     ]
   )
 
-  const { component: StepComponent } = step
-
   return (
     <Formik
       {...formikProps}
@@ -141,7 +139,7 @@ function FormikWizardStep({
             setStatus={setStatus}
             setValues={setValues}
           >
-            <StepComponent {...props} />
+            {React.cloneElement(React.createElement(step.component), props)}
           </FormWrapper>
         </Form>
       )}

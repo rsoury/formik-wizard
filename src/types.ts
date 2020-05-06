@@ -13,7 +13,7 @@ export interface FormikWizardContextValue<V = any, S = any> {
 
 export interface FormikWizardStepType {
   id: string
-  component: React.SFC<FormikProps<any>>
+  component: React.SFC<{}>
   validationSchema?: Schema<any>
   validate?: (values: any) => void | object | Promise<FormikErrors<any>>
   initialValues?: FormikWizardBaseValues
